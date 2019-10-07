@@ -78,3 +78,9 @@ body {
   background: #ddd;
   margin-top: 20px;
 }
+ .social-media {
+  height: 20px;
+  width: 20px;
+  margin-left: .5em;
+  margin-right: .5em;
+ }
