@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sterne-Test No.2</title>
+	<!-- Add icon library, go to fontawesome for information on which icons can be used -->
+	<script src="https://kit.fontawesome.com/f4ee925a5f.js" crossorigin="anonymous"></script>
+	<style>
+		.sternebewertung {
+			display: inline-block;
+		}
+		/*Customizing label*/
+		.container {
+			position: relative;
+			padding-bottom: 35px;
+			margin-left: 20px;
+			cursor: pointer;
+			font-size: 22px;
+		}
+		/*Hiding default buttons*/
+		.container input {
+			position: absolute;
+			opacity: 0;
+			height: 0;
+			width: 0;
+		}
+		/*Customizing button*/
+		.fa-star {
+			position: absolute;
+			top: 35px;
+			left: 0;
+			color: #eee;
+		}
+		/*Coloring on selection*/
+		.container input:checked ~ .fa-star {
+			color: #ffcc00;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="sternebewertung">
+		<label class="container">-2
+			<input type="radio" name="zufriedenheit" value="1">
+			<span class="fas fa-star" class="checkmark"></span>
+		</label>
+		<label class="container">-1
+			<input type="radio" name="zufriedenheit" value="2">
+			<span class="fas fa-star" class="checkmark"></span>
+		</label>
+		<label class="container">0
+			<input type="radio" name="zufriedenheit" value="3" checked="checked">
+			<span class="fas fa-star" class="checkmark"></span>
+		</label>
+		<label class="container">+1
+			<input type="radio" name="zufriedenheit" value="4">
+			<span class="fas fa-star" class="checkmark"></span>
+		</label>
+		<label class="container">+2
+			<input type="radio" name="zufriedenheit" value="5">
+			<span class="fas fa-star" class="checkmark"></span>
+		</label>
+	</div>
+</body>
+</html>
