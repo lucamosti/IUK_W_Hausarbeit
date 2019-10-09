@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sterne-Test No.3</title>
+	<style>
+		/*Setting checkmark*/
+		div.zufriedenheit-sterne {
+			float: left;
+		}
+		/*Hiding default buttons*/
+		span.container input {
+			display: none;
+		}
+		span.container > label {
+			float: right;
+			width: 1em;
+			padding: .1em;
+			font-size: 200%;
+			line-height: 1.2;
+			color: #595959;
+			overflow: hidden;
+			white-space: nowrap;
+			cursor: pointer;
+		}
+		/*Putting star before label, the withespaces are necessary*/
+		span.container > label:before {
+			content: '\002605    ';
+		}
+		/*Coloring on selection*/
+		span.container input:checked ~ label.checkmark {
+			color: #FFCC00;
+		}
+		/*Coloring while hovering over*/
+		span.container > label:hover,
+		span.container > label:hover ~ label {
+			color: #FFCC00;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="zufriedenheit-sterne">
+		<span class="container">
+			<input type="radio" name="zufriedenheit" value="5" id="form-star5">
+				<label for="form-star5" class="checkmark">5 Sterne</label>
+			<input type="radio" name="zufriedenheit" value="4" id="form-star4">
+				<label for="form-star4" class="checkmark">4 Sterne</label>
+			<input type="radio" name="zufriedenheit" value="3" id="form-star3" checked="checked">
+				<label for="form-star3" class="checkmark">3 Sterne</label>
+			<input type="radio" name="zufriedenheit" value="2" id="form-star2">
+				<label for="form-star2" class="checkmark">2 Sterne</label>
+			<input type="radio" name="zufriedenheit" value="1" id="form-star1">
+				<label for="form-star1" class="checkmark">1 Stern</label>
+		</span>
+	</div>
+</body>
+</html>
