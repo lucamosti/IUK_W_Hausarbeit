@@ -1,0 +1,33 @@
+div.box{
+	margin-bottom: 40px;
+}
+table{
+	border-collapse: collapse;
+	width: 100%;
+}
+tr{
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+th{
+	text-align: left;
+}
+col.picturecol{
+	width: 120px;
+}
+col.titlecol{
+	width: 10%;
+}
+col.pricecol{
+	width: 10%;
+}
+col.amountcol{
+	width: 10%;
+}
+input.submitbutton{
+	width: 8%;
+	float: right;
+}
+fieldset{
+	border: 0;
+}
