@@ -1,6 +1,4 @@
-div.box{
-	margin-bottom: 40px;
-}
+/* erstellen der "rahmen" um die zeilen der tabelle */
 table{
 	border-collapse: collapse;
 	width: 100%;
@@ -9,9 +7,13 @@ tr{
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 }
-th{
-	text-align: left;
+
+/* textausrichtung, achtung bei anpassung der anzahl spalten */
+td:nth-child(4), td:last-child, th:nth-child(n-1), th:last-child{
+	text-align: right;
 }
+
+/* breite der spalten */
 col.picturecol{
 	width: 120px;
 }
@@ -24,6 +26,8 @@ col.pricecol{
 col.amountcol{
 	width: 10%;
 }
+
+/* position des submitbuttons */
 input.submitbutton{
 	width: 8%;
 	float: right;
@@ -31,3 +35,4 @@ input.submitbutton{
 fieldset{
 	border: 0;
 }
+
