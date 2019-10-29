@@ -20,7 +20,7 @@ body {
 }
 
 /*Navigations Menü*/
-.topnav {
+.navbar{
   overflow: hidden;
   background-color: rgb(138, 50, 50);
 }
@@ -85,4 +85,14 @@ body {
   width: 20px;
   margin-left: .5em;
   margin-right: .5em;
+ }
+
+ /*Links*/
+ .navbar li a{
+   color:white;
+ }
+
+ /*Einkaufswagen*/
+ .einkaufswagen{
+   float: right;
  }
