@@ -44,9 +44,25 @@ body {
   padding: 0;
 }
 
+.nav-item {
+  margin-right: 10px;
+  margin-left: 10 px;
+  font-size: large;
+}
+
+#home {
+  margin-left: 25px;
+}
+
+#imgCart {
+  font-size: x-large;
+}
+
 /*Einkaufswagen*/
 #einkaufswagen {
       margin-right: 0!important;
+      padding-left: 10px;
+      padding-right: 20px;
     }
 
 /* Zwei Spalten */
