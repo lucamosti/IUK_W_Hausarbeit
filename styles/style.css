@@ -40,10 +40,14 @@ body {
   text-decoration: none;
 }
 
- /*Einkaufswagen*/
- .einkaufswagen{
-  float: right;
+.navbar {
+  padding: 0;
 }
+
+/*Einkaufswagen*/
+#einkaufswagen {
+      margin-right: 0!important;
+    }
 
 /* Zwei Spalten */
 /* Linke Spalte: Main Content*/
