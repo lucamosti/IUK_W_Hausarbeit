@@ -2,25 +2,42 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<title>Beats by Br&uuml;schi - Der online Shop f&uuml;r Kopfh&ouml;rer</title>
+	<title>Beats by Brüschi - Der online Shop für Kopfhörer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
-	<link rel="stylesheet" type="text/css" href="styles/style-einkaufswagen.css">
 </head>
 <body>
 	<div class="header">
-		<h1>Beats by Br&uuml;schi</h1>
+	<h1><img src="images/logo_klein.png" class="logo">Beats by Brüschi</h1>
 	</div>
 
-	<div class="topnav">
-		<a href=index.html>Home</a>
-		<a href="Produkte/in_ear_Kopfhörer.html">In-Ear-Kopfhörer</a>
-		<a href="Produkte/on_ear_Kopfhörer.html">On-Ear-Kopfhörer</a>
-		<a href="Produkte/over_ear_Kopfhörer.html">Over-Ear-Kopfhörer</a>
-		<a href=einkaufswagen.html style="float:right">Einkaufswagen</a>
-	</div>
+	<nav class="navbar sticky-top navbar-expand-lg topnav">
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item" id="home">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Produkte/in_ear_Kopfhörer.html">In-Ear-Kopfhörer</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Produkte/on_ear_Kopfhörer.html">On-Ear-Kopfhörer</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Produkte/over_ear_Kopfhörer.html">Over-Ear-Kopfhörer</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav mr-auto" id="einkaufswagen">
+				<li class="nav-item" id="imgCart">
+					<a class="nav-link" href="einkaufswagen.html">&#x1F6D2;</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
 	<div class="row">
-		<div class="leftcolumn">
+		<div class="col-sm-8">
 			<div class="box">
 				<div class="einkaufswagen">
 					<h2>Einkaufswagen</h2>
@@ -59,14 +76,23 @@
 				</div>
 			</div>
 		</div>
-		<div class="rightcolumn">
+		<div class="col-sm-4">
 			<div class="box">
-				<h2>&Uuml;ber uns</h2>
-				<div class="fakeimg" style="height:100px;">Platzhalter f&uuml;r Bild</div>
-				<p>Informationen &uuml;ber Beats by Br&uuml;schi</p>
+				<h2>Über uns</h2>
+				<div>
+					<p>
+						<img src="images/profilbilder/matthias_brueschweiler.png" class="profile-pictures">
+						<img src="images/profilbilder/benjamin_gut.png" class="profile-pictures">
+						<img src="images/profilbilder/luca_mosti.png" class="profile-pictures">
+					</p>
+				</div>
+				<p>Wir sind ein Team bestehend aus 3 Systemtechnik-Studenten mit der Vertiefunsgrichtung Informations- und Kommunikationssysteme.</p>
+				<p>Von links: Matthias Brueschweiler, Benjamin Gut und Luca Mosti</p>
 			</div>
 			<div class="box">
 				<h3>Letzte Posts</h3>
+					<p><a href="index.html#box-1">Willkommen bei Beats by Brüschi!</a></p>
+					<p><a href="index.html#box-2">Erstellung der Webseite</a></p>
 			</div>
 			<div class="box">
 				<h3>Follow Us</h3>

@@ -96,6 +96,16 @@ body {
   padding: 20px;
 }
 
+/*Formatierung Links*/
+a {
+  color: black; 
+}
+
+a:hover {
+  color: #8A3232;
+}
+
+
 /*Box Effekte für Einträge*/
 .box {
   background-color: white;
