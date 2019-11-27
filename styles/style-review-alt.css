@@ -1,0 +1,36 @@
+/*Setting checkmark*/
+		div.zufriedenheit-sterne {
+			float: left;
+			line-height: 40px;
+		}
+		/*Hiding default buttons*/
+		span.container input {
+			display: none;
+		}
+		span.container > label {
+			float: right;
+			width: 1em;
+			padding: .1em;
+			font-size: 200%;
+			line-height: 1.2;
+			color: #595959;
+			overflow: hidden;
+			white-space: nowrap;
+			cursor: pointer;
+		}
+		/*Putting star before label, the withespaces are necessary*/
+		span.container > label:before {
+			content: '\002605    ';
+		}
+		/*Coloring on selection*/
+		span.container input:checked ~ label.checkmark {
+			color: #FFCC00;
+		}
+		/*Coloring while hovering over*/
+		span.container > label:hover,
+		span.container > label:hover ~ label {
+			color: #FFCC00;
+		}
+		fieldset {
+			border: 0;
+		}

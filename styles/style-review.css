@@ -1,36 +1,49 @@
-/*Setting checkmark*/
-		div.zufriedenheit-sterne {
-			float: left;
-			line-height: 40px;
-		}
-		/*Hiding default buttons*/
-		span.container input {
-			display: none;
-		}
-		span.container > label {
-			float: right;
-			width: 1em;
-			padding: .1em;
-			font-size: 200%;
-			line-height: 1.2;
-			color: #595959;
-			overflow: hidden;
-			white-space: nowrap;
-			cursor: pointer;
-		}
-		/*Putting star before label, the withespaces are necessary*/
-		span.container > label:before {
-			content: '\002605    ';
-		}
-		/*Coloring on selection*/
-		span.container input:checked ~ label.checkmark {
-			color: #FFCC00;
-		}
-		/*Coloring while hovering over*/
-		span.container > label:hover,
-		span.container > label:hover ~ label {
-			color: #FFCC00;
-		}
-		fieldset {
-			border: 0;
-		}
+fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/* Titles */
+h3.formtitle {
+	clear: both;
+	line-height: normal;
+	margin: 0;
+}
+
+/****** Style Star Rating Widget *****/
+fieldset.rating {
+	border: none;
+	float: left;
+}
+
+fieldset.rating > input {
+	display: none;
+}
+fieldset.rating > label:before {
+	margin: 5px;
+	font-size: 2em;
+	display: inline-block;
+	content: "\002605";
+}
+
+fieldset.rating > label {
+	color: #ddd; 
+	float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+fieldset.rating > input:checked ~ label, /* show gold star when clicked */
+fieldset.rating:not(:checked) > label:hover, /* hover current star */
+fieldset.rating:not(:checked) > label:hover ~ label {
+	color: #FFCC00;
+} 
+
+/* hover previous stars in list */
+fieldset.rating > input:checked + label:hover,
+fieldset.rating > input:checked ~ label:hover,
+fieldset.rating > label:hover ~ input:checked ~ label, 
+fieldset.rating > input:checked ~ label:hover ~ label {
+	color: #FFED85;
+}
+
