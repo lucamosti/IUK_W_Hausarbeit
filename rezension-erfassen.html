@@ -3,6 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<title>Beats by Br&uuml;schi - Rezension erfassen</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link rel="stylesheet" type="text/css" href="styles/style-review.css">
 </head>
@@ -10,98 +14,183 @@
 	<div class="header">
 		<h1>Beats by Br&uuml;schi</h1>
 	</div>
-	<div class="topnav">
-		<a href=index.html>Home</a>
-		<a href="Produkte/in_ear_Kopfhörer.html">In-Ear-Kopfhörer</a>
-		<a href="Produkte/on_ear_Kopfhörer.html">On-Ear-Kopfhörer</a>
-		<a href="Produkte/over_ear_Kopfhörer.html">Over-Ear-Kopfhörer</a>
-		<a href=einkaufswagen.html style="float:right">Einkaufswagen</a>
-	</div>
+
+	<nav class="navbar sticky-top navbar-expand-lg topnav">
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item" id="home">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Produkte/in_ear_Kopfhörer.html">In-Ear-Kopfhörer</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Produkte/on_ear_Kopfhörer.html">On-Ear-Kopfhörer</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Produkte/over_ear_Kopfhörer.html">Over-Ear-Kopfhörer</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav mr-auto" id="einkaufswagen">
+				<li class="nav-item" id="imgCart">
+					<a class="nav-link" href="einkaufswagen.html">&#x1F6D2;</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
 	<div class="row">
-		<div class="leftcolumn">
+		<div class="col-sm-8">
 			<div class="box">
 
 				<div id="produktanzeige"></div>
 
 				<h2>Erfassen Sie eine Rückmeldung zum Produkt</h2>
-				<form action="" method="POST">
-					<h3 class="formtitle">Design</h3>
-					<fieldset class="rating">
-						<input type="radio" id="form-design-star5" name="design-zufriedenheit" value="5" />
-							<label class="full" for="form-design-star5" title="5 stars"></label>
-						<input type="radio" id="form-design-star4" name="design-zufriedenheit" value="4" />
-							<label class="full" for="form-design-star4" title="4 stars"></label>
-						<input type="radio" id="form-design-star3" name="design-zufriedenheit" value="3" />
-							<label class="full" for="form-design-star3" title="3 stars"></label>
-						<input type="radio" id="form-design-star2" name="design-zufriedenheit" value="2" />
-							<label class="full" for="form-design-star2" title="2 stars"></label>
-						<input type="radio" id="form-design-star1" name="design-zufriedenheit" value="1" checked="checked" />
-							<label class="full" for="form-design-star1" title="1 star"></label>
-					</fieldset>
+				<!-- Action und Method muss noch ausgefüllt werden -->
+				<form class="needs-validation" novalidate >
 
-					<h3 class="formtitle">Soundqualit&auml;t</h3>
-					<fieldset class="rating">
-						<input type="radio" id="form-soundquality-star5" name="soundquality-zufriedenheit" value="5" />
-							<label class="full" for="form-soundquality-star5" title="5 stars"></label>
-						<input type="radio" id="form-soundquality-star4" name="soundquality-zufriedenheit" value="4" />
-							<label class="full" for="form-soundquality-star4" title="4 stars"></label>
-						<input type="radio" id="form-soundquality-star3" name="soundquality-zufriedenheit" value="3" />
-							<label class="full" for="form-soundquality-star3" title="stars"></label>
-						<input type="radio" id="form-soundquality-star2" name="soundquality-zufriedenheit" value="2" />
-							<label class="full" for="form-soundquality-star2" title="2 stars"></label>
-						<input type="radio" id="form-soundquality-star1" name="soundquality-zufriedenheit" value="1" checked="checked" />
-							<label class="full" for="form-soundquality-star1" title="1 star"></label>
-					</fieldset>
-
-					<h3 class="formtitle">Preis- Leistungsverh&auml;ltnis</h3>
-					<fieldset class="rating">
-						<input type="radio" id="form-price-performance-star5" name="price-performance-zufriedenheit" value="5" />
-							<label class="full" for="form-price-performance-star5" title="5 stars"></label>
-						<input type="radio" id="form-price-performance-star4" name="price-performance-zufriedenheit" value="4" />
-							<label class="full" for="form-price-performance-star4" title="4 stars"></label>
-						<input type="radio" id="form-price-performance-star3" name="price-performance-zufriedenheit" value="3" />
-							<label class="full" for="form-price-performance-star3" title="3 stars"></label>
-						<input type="radio" id="form-price-performance-star2" name="price-performance-zufriedenheit" value="2" />
-							<label class="full" for="form-price-performance-star2" title="2 stars"></label>
-						<input type="radio" id="form-price-performance-star1" name="price-performance-zufriedenheit" value="1" checked="checked" />
-							<label class="full" for="form-price-performance-star1" title="1 star"></label>
-					</fieldset>
-
-					<br><br><br>
-
-					<h3 class="formtitle">Hinterlassen Sie einen Kommentar <small>(Optional)</small></h3>
 					<fieldset>
-						<div>
-							<textarea name="instructions" rows="8" cols="60" maxlength="400" placeholder="No more than 400 characters long." id="form-instructions"></textarea>
+						<div class="form-group col-6">
+							<label for="nameInput">Name</label>
+							<input type="text" class="form-control" id="nameInput" placeholder="First name" required>
+						</div>
+						<div class="form-group col-6">
+							<label for="emailInput">Email address</label>
+							<input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="email@example.com" required>
 						</div>
 					</fieldset>
+
+
+					<div class="form-group">
+						<h3 class="formtitle">Design</h3>
+						<fieldset class="rating" id="design-stars">
+							<input type="radio" id="form-design-star5" name="design-zufriedenheit" value="5" />
+								<label class="full" for="form-design-star5" title="5 stars"></label>
+							<input type="radio" id="form-design-star4" name="design-zufriedenheit" value="4" />
+								<label class="full" for="form-design-star4" title="4 stars"></label>
+							<input type="radio" id="form-design-star3" name="design-zufriedenheit" value="3" />
+								<label class="full" for="form-design-star3" title="3 stars"></label>
+							<input type="radio" id="form-design-star2" name="design-zufriedenheit" value="2" />
+								<label class="full" for="form-design-star2" title="2 stars"></label>
+							<input type="radio" id="form-design-star1" name="design-zufriedenheit" value="1" checked="checked" />
+								<label class="full" for="form-design-star1" title="1 star"></label>
+						</fieldset>
+
+						<h3 class="formtitle">Soundqualit&auml;t</h3>
+						<fieldset class="rating" id="soundquality-stars">
+							<input type="radio" id="form-soundquality-star5" name="soundquality-zufriedenheit" value="5" />
+								<label class="full" for="form-soundquality-star5" title="5 stars"></label>
+							<input type="radio" id="form-soundquality-star4" name="soundquality-zufriedenheit" value="4" />
+								<label class="full" for="form-soundquality-star4" title="4 stars"></label>
+							<input type="radio" id="form-soundquality-star3" name="soundquality-zufriedenheit" value="3" />
+								<label class="full" for="form-soundquality-star3" title="stars"></label>
+							<input type="radio" id="form-soundquality-star2" name="soundquality-zufriedenheit" value="2" />
+								<label class="full" for="form-soundquality-star2" title="2 stars"></label>
+							<input type="radio" id="form-soundquality-star1" name="soundquality-zufriedenheit" value="1" checked="checked" />
+								<label class="full" for="form-soundquality-star1" title="1 star"></label>
+						</fieldset>
+
+						<h3 class="formtitle">Preis- Leistungsverh&auml;ltnis</h3>
+						<fieldset class="rating" id="price-performance-stars">
+							<input type="radio" id="form-price-performance-star5" name="price-performance-zufriedenheit" value="5" />
+								<label class="full" for="form-price-performance-star5" title="5 stars"></label>
+							<input type="radio" id="form-price-performance-star4" name="price-performance-zufriedenheit" value="4" />
+								<label class="full" for="form-price-performance-star4" title="4 stars"></label>
+							<input type="radio" id="form-price-performance-star3" name="price-performance-zufriedenheit" value="3" />
+								<label class="full" for="form-price-performance-star3" title="3 stars"></label>
+							<input type="radio" id="form-price-performance-star2" name="price-performance-zufriedenheit" value="2" />
+								<label class="full" for="form-price-performance-star2" title="2 stars"></label>
+							<input type="radio" id="form-price-performance-star1" name="price-performance-zufriedenheit" value="1" checked="checked" />
+								<label class="full" for="form-price-performance-star1" title="1 star"></label>
+						</fieldset>
+					</div>
+
+					<br><br>
+
+					<button onchange="validateFeedback()">Test</button>
+
+					<h3 class="formtitle"></h3>
 					<fieldset>
-						<input type="submit" value="Rezension erfassen">
+
+						<div class="form-group col-6">
+							<label for="form-textarea-feedback">Hinterlassen Sie einen Kommentar</label>
+							<textarea class="form-control" id="form-textarea-feedback" name="feedback" rows="4" maxlength="50" placeholder="Max 50 characters" required></textarea>
+						</div>
+					</fieldset>
+
+					<fieldset>
+						<button type="submit" class="btn btn-primary" id="submitButton" disabled>Rezension erfassen</button>
 					</fieldset>
 				</form>
 			</div>
 
 		</div>
-		<div class="rightcolumn">
+		<div class="col-sm-4">
 			<div class="box">
 				<h2>Über uns</h2>
-				<div class="fakeimg" style="height:100px;">Platzhalter für Bild</div>
-				<p>Informationen über Beats by Brüschi</p>
+				<div>
+					<p>
+						<img src="images/profilbilder/matthias_brueschweiler.png" class="profile-pictures">
+						<img src="images/profilbilder/benjamin_gut.png" class="profile-pictures">
+						<img src="images/profilbilder/luca_mosti.png" class="profile-pictures">
+					</p>
+				</div>
+				<p>Wir sind ein Team bestehend aus 3 Systemtechnik-Studenten mit der Vertiefunsgrichtung Informations- und Kommunikationssysteme.</p>
+				<p>Von links: Matthias Brueschweiler, Benjamin Gut und Luca Mosti</p>
 			</div>
 			<div class="box">
 				<h3>Letzte Posts</h3>
+					<p><a href="#box-1">Willkommen bei Beats by Brüschi!</a></p>
+					<p><a href="#box-2">Erstellung der Webseite</a></p>
 			</div>
 			<div class="box">
 				<h3>Follow Us</h3>
-				<p>Twitter</p>
-				<p>Instagram</p>
-				<p>Facebook</p>
+				<p><img src="images/twitter.svg" alt="Twitter Logo" class="social-media"> Twitter</p>
+				<p><img src="images/instagram.svg" alt="Instagram Logo" class="social-media"> Instagram</p>
+				<p><img src="images/facebook.svg" alt="Facebook Logo" class="social-media"> Facebook</p>
 			</div>
 		</div>
 	</div>
+
 	<div class="footer">
 		<p><small>Beats by Brüschi ©</small></p>
+		<div>
+			<small>Öffnungszeiten Kaufberatung: 
+			<p> Montag-Freitag: 08:00 - 17:00</p>
+			<p>Kontakt: matthias.brueschweiler@ntb.ch</p>
+			</small>
+		</div>
 	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+
+
+
+	<script type="text/javascript">
+		// Example starter JavaScript for disabling form submissions if there are invalid fields
+		(function() {
+			'use strict';
+			window.addEventListener('load', function() {
+				// Fetch all the forms we want to apply custom Bootstrap validation styles to
+				var forms = document.getElementsByClassName('needs-validation');
+				// Loop over them and prevent submission
+				var validation = Array.prototype.filter.call(forms, function(form) {
+					form.addEventListener('submit', function(event) {
+						if (form.checkValidity() === false) {
+							event.preventDefault();
+							event.stopPropagation();
+						}
+						form.classList.add('was-validated');
+					}, false);
+				});
+			}, false);
+		})();
+	</script>
+
+	<script src="scripts/rezensionsScripts.js"></script>
+
+
 </body>
 </html>

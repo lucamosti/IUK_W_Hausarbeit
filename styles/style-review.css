@@ -5,23 +5,27 @@ fieldset {
 }
 
 /* Titles */
-h3.formtitle {
+.formtitle {
 	clear: both;
 	line-height: normal;
 	margin: 0;
+	font-size: 1.2em;
+	padding-left: 15px;
 }
 
 /****** Style Star Rating Widget *****/
 fieldset.rating {
 	border: none;
 	float: left;
+	padding-left: 15px;
 }
 
 fieldset.rating > input {
 	display: none;
 }
 fieldset.rating > label:before {
-	margin: 5px;
+	margin-left: : 5px;
+	margin-right: 5px;
 	font-size: 2em;
 	display: inline-block;
 	content: "\002605";
@@ -47,3 +51,9 @@ fieldset.rating > input:checked ~ label:hover ~ label {
 	color: #FFED85;
 }
 
+
+#submitButton, #submitButton:hover, #submitButton:active, #submitButton:disabled #submitButton:focus {
+	background-color: #8A3232;
+	border-color: #8A3232;
+	color: white;
+}
