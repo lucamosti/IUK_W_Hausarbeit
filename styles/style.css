@@ -45,8 +45,6 @@ body {
 }
 
 .nav-item {
-  margin-right: 10px;
-  margin-left: 10px;
   font-size: large;
 }
 
@@ -57,20 +55,46 @@ body {
   background-color: rgb(100, 0, 0);
 }
 
-#home {
-  margin-left: 25px;
+
+/* Abstand aller Elemente wenn die navbar collapsed */
+@media screen and (max-width: 991px) {
+	.nav-item {
+		margin-left: 4%;
+	}
 }
+
+
+/* Abstand vom Home Button vom linken Rand wenn screen large (lg) */
+@media screen and (min-width: 992px) {
+	#home {
+		margin-left: 25px;
+	}
+	#einkaufswagen {
+		padding-left: 10px;
+		padding-right: 20px;
+	}
+}
+
 
 #imgCart {
   font-size: x-large;
 }
 
+/* Darstellung der Drei Striche bei navbar collapsed */
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
 /*Einkaufswagen*/
 #einkaufswagen {
       margin-right: 0!important;
-      padding-left: 10px;
-      padding-right: 20px;
     }
+
+#einkaufswagen-Symbol {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 
 .btn-cart {
       background-color: #8A3232;
