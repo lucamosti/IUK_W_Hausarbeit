@@ -9,11 +9,28 @@
 
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link rel="stylesheet" type="text/css" href="styles/style-review.css">
+
+	<style type="text/css">
+		#produktAuswahlBild > img {
+			background-color: #aaa;
+			height: 8em;
+			/*width: 8em;*/
+			padding: .2em;
+		}
+
+		#produkteListe {
+			margin-top: .2em;
+			margin-bottom: .2em;
+		}
+
+	</style>
+
 </head>
-<body>
-	<div class="header">
+
+<body onload="itemHinzufuegenBewertung()">
+	<header class="header">
 		<h1><img src="images/logo_klein.png" class="logo">Beats by Brüschi</h1>
-	</div>
+	</header>
 
 	<nav class="navbar sticky-top navbar-expand-lg topnav col-xs-12">
 
@@ -44,15 +61,37 @@
 		</div>
 	</nav>
 
+
 	<div class="row">
 		<div class="col-sm-12 col-lg-8">
 			<div class="box">
 
-				<div id="produktanzeige"></div>
-
-				<h2>Erfassen Sie eine Rückmeldung zum Produkt</h2>
 				<!-- Action und Method muss noch ausgefüllt werden -->
 				<form class="needs-validation" novalidate >
+
+					<fieldset>
+						<!-- script muss noch erstellt werden-->
+						<div id="produktAnzeige" class="form-inline col-12">
+							<!-- um produkte zu laden -->
+							<!-- script muss noch erstellt werden-->
+							<select id="produkteListe" class="form-control col-lg-6 col-md-8 col-sm" onchange="produktBildLadenBewertung()">
+								<option>Dies ist ein Test für Produkte</option>
+								<option>Zweiter Test für Produkte</option>
+							</select>
+
+							<!-- um Bilder zu laden -->
+							<div id="produktAuswahlBild" class="form-inline offset-2">
+								<!-- Momentaner Platzhalter -->
+								<img src="images/logo_klein.png" alt="Platzhalter für Bild" id="produktBild">
+							</div>
+						</div>
+
+
+						<br><br>
+
+					</fieldset>
+
+					<h2>Erfassen Sie eine Rückmeldung zum Produkt</h2>
 
 					<fieldset>
 						<div class="form-group col-lg-6 col-md-8 col-sm">
@@ -128,7 +167,7 @@
 			</div>
 
 		</div>
-		<div class="col-xs-12 col-md-4">
+		<div class="col-sm-12 col-lg-4">
 			<div class="box">
 				<h2>Über uns</h2>
 				<div>
