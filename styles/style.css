@@ -86,6 +86,33 @@ body {
   width: 75%;
 }
 
+/*Carousel*/
+
+
+.carousel-caption {
+  color: black;
+}
+
+.carousel-inner img {
+  margin: auto;
+}
+
+.carousel-control-next-icon {
+  background-image : url("../images/carousel/next.svg") ;
+}
+
+.carousel-control-prev-icon {
+  background-image : url("../images/carousel/back.svg");
+}
+
+.carousel-caption {
+  position: relative;
+  left: auto;
+  right: auto;
+}
+
+
+
 /*Rechte Spalte: Side Content*/
 .rightcolumn {
   float: left;
