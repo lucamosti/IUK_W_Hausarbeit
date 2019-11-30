@@ -7,12 +7,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/style-Copy.css">
 	<link rel="stylesheet" type="text/css" href="styles/style-review.css">
 	<style type="text/css">
 		.navbar-toggler-icon {
 			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 		}
+
+		/* Abstand aller Elemente wenn die navbar collapsed */
+		@media screen and (max-width: 991px) {
+			.nav-item {
+				margin-left: 4%;
+			}
+		}
+
+
+		/* Abstand vom Home Button vom linken Rand wenn screen large (lg) */
+		@media screen and (min-width: 992px) {
+			#home {
+				margin-left: 25px;
+			}
+			#einkaufswagen {
+				padding-left: 10px;
+				padding-right: 20px;
+			}
+		}
+
 	</style>
 </head>
 <body>
@@ -27,7 +47,7 @@
 		</button>
 
 		<div class="collapse navbar-collapse col-xs-12" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto col-sm-8">
+			<ul class="navbar-nav mr-auto col-lg-9">
 				<li class="nav-item" id="home">
 					<a class="nav-link" href="index.html">Home</a>
 				</li>
@@ -41,9 +61,9 @@
 					<a class="nav-link" href="Produkte/over_ear_Kopfhörer.html">Over-Ear-Kopfhörer</a>
 				</li>
 			</ul>
-			<ul class="navbar-nav mr-auto col-sm-1 offset-md-3" id="einkaufswagen">
+			<ul class="navbar-nav mr-auto offset-lg-2" id="einkaufswagen">
 				<li class="nav-item" id="imgCart">
-					<a class="nav-link" href="einkaufswagen.html">&#x1F6D2;</a>
+					<a id="einkaufswagen-Symbol" class="nav-link" href="einkaufswagen.html">&#x1F6D2;</a>
 				</li>
 			</ul>
 		</div>
