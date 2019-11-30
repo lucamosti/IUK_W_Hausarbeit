@@ -46,8 +46,15 @@ body {
 
 .nav-item {
   margin-right: 10px;
-  margin-left: 10 px;
+  margin-left: 10px;
   font-size: large;
+}
+
+.nav-item-active {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: large;
+  background-color: rgb(100, 0, 0);
 }
 
 #home {
