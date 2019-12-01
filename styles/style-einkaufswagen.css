@@ -1,38 +1,47 @@
-/* erstellen der "rahmen" um die zeilen der tabelle */
-table{
-	border-collapse: collapse;
-	width: 100%;
-}
-tr{
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
+/* Layout fuer Spaltenbreite */
+table {
+	table-layout: fixed;
+	word-wrap: break-word;
 }
 
+/* erstellen der "rahmen" um die zeilen der tabelle */
+tr{
+	height: 8em;
+}
+
+
+#titleCol {
+	height: auto;
+}
+
+
 /* textausrichtung, achtung bei anpassung der anzahl spalten */
-td:nth-child(4), td:last-child, th:nth-child(n-1), th:last-child{
+td:nth-child(4), td:last-child, th:nth-child(4), th:last-child{
 	text-align: right;
 }
 
 /* breite der spalten */
-col.picturecol{
-	width: 120px;
+#picturecol{
+	width: 8em;
 }
-col.titlecol{
+#titlecol{
+	width: 11%;
+}
+#pricecol{
 	width: 10%;
 }
-col.pricecol{
-	width: 10%;
-}
-col.amountcol{
-	width: 10%;
+#amountcol{
+	width: 11%;
 }
 
-/* position des submitbuttons */
-input.submitbutton{
-	width: 8%;
-	float: right;
-}
-fieldset{
-	border: 0;
+/* Farbe des Bestellbuttons */
+#bestellButton, #bestellButton:hover, #bestellButton:active, #bestellButton:disabled #bestellButton:focus {
+	background-color: #8A3232;
+	border-color: #8A3232;
+	color: white;
 }
 
+/* fakeimg groesse LÖSCHEN VOR PUBLISH */
+.fakeimg {
+	height: 8em;
+}

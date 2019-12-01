@@ -48,10 +48,11 @@ body {
 	font-size: large;
 }
 
-.nav-item-active {
-	margin-right: 10px;
+/* Nur backgroundcolor, der rest wird von den items selbst erledigt */
+.nav-item-active > a {
+	/*margin-right: 10px;
 	margin-left: 10px;
-	font-size: large;
+	font-size: large;*/
 	background-color: rgb(100, 0, 0);
 }
 
@@ -64,6 +65,9 @@ body {
 
 	.nav-item-active {
 		margin-left: 4%;
+	}
+	#einkaufswagenSymbol {
+		width: 2em;
 	}
 }
 
