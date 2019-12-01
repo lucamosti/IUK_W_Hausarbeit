@@ -107,6 +107,15 @@ body {
 .btn-cart {
 	background-color: #8A3232;
 	border-color: #8A3232;
+	float: right;
+	width: 200px;
+}
+
+
+.btn-rezension {
+	background-color: #8A3232;
+	border-color: #8A3232;
+	color: rgb(255, 253, 253);
 }
 
 /* Zwei Spalten */
