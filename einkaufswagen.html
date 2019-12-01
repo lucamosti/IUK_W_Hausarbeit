@@ -6,15 +6,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/style-einkaufswagen.css">
 </head>
 <body>
-	<div class="header">
-	<h1><img src="images/logo_klein.png" class="logo">Beats by Brüschi</h1>
-	</div>
+	<header class="header">
+		<h1><img src="images/logo_klein.png" class="logo">Beats by Brüschi</h1>
+	</header>
 
-	<nav class="navbar sticky-top navbar-expand-lg topnav">
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
+	<nav class="navbar sticky-top navbar-expand-lg topnav col-xs-12">
+
+		<button class="navbar-toggler col-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse col-xs-12" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto col-lg-9">
 				<li class="nav-item" id="home">
 					<a class="nav-link" href="index.html">Home</a>
 				</li>
@@ -28,49 +34,56 @@
 					<a class="nav-link" href="Produkte/over_ear_Kopfhörer.html">Over-Ear-Kopfhörer</a>
 				</li>
 			</ul>
-			<ul class="navbar-nav mr-auto" id="einkaufswagen">
+			<ul class="navbar-nav mr-auto offset-lg-2" id="einkaufswagen">
 				<li class="nav-item-active" id="imgCart">
-					<a class="nav-link" href="einkaufswagen.html">&#x1F6D2;</a>
+					<a id="einkaufswagenSymbol" class="nav-link" href="einkaufswagen.html">&#x1F6D2;</a>
 				</li>
 			</ul>
 		</div>
 	</nav>
 
+
+
 	<div class="row">
-		<div class="col-sm-8">
+		<div class="col-sm-12 col-lg-8">
 			<div class="box">
 				<div class="einkaufswagen">
 					<h2>Einkaufswagen</h2>
-					<form action="" method="POST">
+					<form action="" method="POST" class="needs-validation" novalidate>
 						<fieldset>
-							<table>
-								<colgroup>
-									<col class="picturecol">
-									<col class="titlecol">
-									<col class="descriptioncol">
-									<col class="pricecol">
-									<col class="amountcol">
-								</colgroup>
-								<thead>
-									<tr>
-										<th colspan="3"></th>
-										<th scope="col">Preis</th>
-										<th scope="col">Menge</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><div class="fakeimg" style="height: 120px;">Platzhalter f&uuml;r Bild</div></td>
-										<td><a href="">Titel</a></td>
-										<td>Beschreibung</td>
-										<td>Preis in CHF</td>
-										<td>Die Anzahl</td>
-									</tr>
-								</tbody>
-							</table>
+							<div>
+								<table class="table">
+									<colgroup>
+										<col class="picturecol">
+										<col class="titlecol">
+										<col class="descriptioncol">
+										<col class="pricecol">
+										<col class="amountcol">
+									</colgroup>
+									<thead>
+										<tr>
+											<th></th>
+											<th scope="col">Artikel</th>
+											<th scope="col">Beschreibung</th>
+											<th scope="col">Preis</th>
+											<th scope="col">Menge</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><div class="fakeimg" style="height: 120px;">Platzhalter f&uuml;r Bild</div></td>
+											<td><a href="#">Lorem Ipsum</a></td>
+											<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis neque velit, scelerisque eu mauris a, vestibulum euismod nisl. Maecenas placerat turpis ac nisl gravida, quis dapibus velit vehicula. Nullam vitae ligula consequat nunc tincidunt sodales at et tortor. Maecenas est tortor, elementum ac nisi ac, sollicitudin interdum tellus.</td>
+											<td>48.99</td>
+											<td>1</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 						</fieldset>
+
 						<fieldset>
-							<input type="submit" value="Bestellen" class="submitbutton">
+							<button type="submit" class="btn btn-primary col-2 offset-10" id="bestellButton">Zur Kasse</button>
 						</fieldset>
 					</form>
 				</div>
@@ -111,5 +124,10 @@
 			</small>
 		</div>
 	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+
 </body>
 </html>

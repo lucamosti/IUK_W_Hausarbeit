@@ -1,15 +1,12 @@
 /* erstellen der "rahmen" um die zeilen der tabelle */
-table{
-	border-collapse: collapse;
-	width: 100%;
-}
+
 tr{
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 }
 
 /* textausrichtung, achtung bei anpassung der anzahl spalten */
-td:nth-child(4), td:last-child, th:nth-child(n-1), th:last-child{
+td:nth-child(4), td:last-child, th:nth-child(4), th:last-child{
 	text-align: right;
 }
 
@@ -27,12 +24,11 @@ col.amountcol{
 	width: 10%;
 }
 
-/* position des submitbuttons */
-input.submitbutton{
-	width: 8%;
-	float: right;
-}
-fieldset{
-	border: 0;
+
+/* Farbe des Bestellbuttons */
+#bestellButton, #bestellButton:hover, #bestellButton:active, #bestellButton:disabled #bestellButton:focus {
+	background-color: #8A3232;
+	border-color: #8A3232;
+	color: white;
 }
 
