@@ -98,9 +98,8 @@ body {
 	margin-right: 0!important;
 }
 
-#einkaufswagen-Symbol {
-	padding-left: 10px;
-	padding-right: 10px;
+#einkaufswagenSymbol {
+	font-size: x-large;
 }
 
 
