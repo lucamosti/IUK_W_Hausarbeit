@@ -116,6 +116,8 @@ body {
 	background-color: #8A3232;
 	border-color: #8A3232;
 	color: rgb(255, 253, 253);
+	float: right;
+	width: 200px;
 }
 
 /* Zwei Spalten */
