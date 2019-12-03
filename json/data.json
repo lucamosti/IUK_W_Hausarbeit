@@ -40,7 +40,7 @@
     }, 
 
     {
-        "id": 3,
+        "id": 4,
         "titel": "Beats EP (On-Ear)",
         "beschreibung": "Präzise abgestimmte Akustik für ein klares und breites Klangspektrum, wie du es von Beats gewohnt bist | Robustes, leichtes Gestell, mit Edelstahl verstärkt | Keine Batterien, unbegrenzte Wiedergabe | Verstellbarer Bügel garantiert maßgeschneiderten Tragekomfort | Anrufe annehmen und Musik steuern – alles bequem über das RemoteTalk Kabel* (* Kompatibel mit iOS Geräten. Funktionsumfang kann je nach Gerät variieren).",
         "kategorie": "On-Ear-Kopfhörer",
@@ -52,18 +52,6 @@
         }
     }, 
 
-    {
-        "id": 4,
-        "titel": "Marshall Headphones Major III Bluetooth",
-        "beschreibung": "Jetzt auch kabellos: Der neue Bluetooth-Kopfhörer aus dem Hause Marshall bietet bis zu 30 Stunden Musikgenuss in CD-Qualität.",
-        "kategorie": "On-Ear-Kopfhörer",
-        "bild": "../images/Marshall_on_ear.png",
-        "garantie": "24 Monate",
-        "preis": {
-            "value": 134,
-            "currency": "CHF"
-        }
-    }, 
 
     {
         "id": 5,
