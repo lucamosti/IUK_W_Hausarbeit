@@ -2,18 +2,14 @@
 function getProducts() {
 	let url = "https://beatsbybrueschi.herokuapp.com/products/";
 
-	fetch(url,  {mode: 'no-cors'}).then(function(response){
-		if (response.status !== 200) {
-			console.log('Looks like there was a problem. Status Code: '+response.status);
-			return;
-		}
-		response.json().then(function(data) {
+	fetch(url, {mode: "no-cors"}).then(function(result){
+		result.json().then(function(data){
 			console.log(data);
-			data.forEach(function(product){
-				let neuesItem = itemHinzufuegen(product);
-				document.getElementById("contentWarenkorb").appendChild(neuesItem);
-			})
-		});
+			var product = data.results; 
+			for(var i = 0; i < product.length; i++){
+				itemHinzufuegen(product[i].titel, product[i].preis.value);
+			}
+		})
 	});
 }
 
@@ -24,9 +20,7 @@ function getProducts() {
 //KOPIEREN in eigenes dokument
 //LOESCHEN VOR ABGABE
 
-function itemHinzufuegen(product) {
-	let id = character.url.match(/\d+/g)[0];
-
+function itemHinzufuegen(titel, preis) {
 	//let itemListe = ;
 	
 	let tableRow = document.createElement("tr");
@@ -35,6 +29,9 @@ function itemHinzufuegen(product) {
 	let priceCel = document.createElement("td");
 	let amountCel = document.createElement("td");
 
+
+	titleCel.append(titel);
+	priceCel.append(preis);
 
 
 	tableRow.appendChild(bildCel);
