@@ -56,7 +56,6 @@
 									<colgroup>
 										<col id="picturecol" >
 										<col id="titlecol" >
-										<col id="descriptioncol" >
 										<col id="pricecol" >
 										<col id="amountcol">
 									</colgroup>
@@ -64,16 +63,14 @@
 										<tr id="titleCol">
 											<th></th>
 											<th scope="col">Artikel</th>
-											<th scope="col">Beschreibung</th>
 											<th scope="col">Preis</th>
 											<th scope="col">Menge</th>
 										</tr>
 									</thead>
-									<tbody>
+									<tbody id="contentWarenkorb">
 										<tr>
 											<td><div class="fakeimg">Platzhalter f&uuml;r Bild</div></td>
 											<td><a href="#">Lorem Ipsum</a></td>
-											<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis neque velit, scelerisque eu mauris a, vestibulum euismod nisl. Maecenas placerat turpis ac nisl gravida, quis dapibus velit vehicula. Nullam vitae ligula consequat nunc tincidunt sodales at et tortor. Maecenas est tortor, elementum ac nisi ac, sollicitudin interdum tellus.</td>
 											<td>48.99</td>
 											<td>1</td>
 										</tr>
@@ -127,7 +124,9 @@
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<script src="scripts/getProdukteFetch.js"></script>
 
 </body>
 </html>
