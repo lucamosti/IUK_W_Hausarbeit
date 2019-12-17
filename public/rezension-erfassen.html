@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<title>Beats by Br&uuml;schi - Rezension erfassen</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/style-review.css">
+</head>
+
+<body onload="itemHinzufuegenBewertung()">
+	<header class="header">
+		<h1><img src="images/logo_klein.png" class="logo">Beats by Brüschi</h1>
+	</header>
+
+	<nav class="navbar sticky-top navbar-expand-lg topnav col-xs-12">
+
+		<button class="navbar-toggler col-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse col-xs-12" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto col-lg-9">
+				<li class="nav-item" id="home">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Produkte/in_ear_Kopfhörer.html">In-Ear-Kopfhörer</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Produkte/on_ear_Kopfhörer.html">On-Ear-Kopfhörer</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Produkte/over_ear_Kopfhörer.html">Over-Ear-Kopfhörer</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav mr-auto offset-lg-2" id="einkaufswagen">
+				<li class="nav-item" id="imgCart">
+					<a id="einkaufswagen-Symbol" class="nav-link" href="einkaufswagen.html">&#x1F6D2;</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+
+	<div class="row">
+		<div class="col-sm-12 col-lg-8">
+			<div class="box clearfix">
+				<div id="produktAnzeige">
+					<h2><div id="produkteListe"></div></h2><br>
+					<div id="produktAuswahlBild" class="form-inline"></div>
+				</div>
+				<form class="needs-validation" novalidate>
+					<fieldset>
+						<br><br>
+					</fieldset>
+					<fieldset>
+						<div class="form-group col-lg-6 col-md-8 col-sm">
+							<label for="nameInput">Name</label>
+							<input type="text" class="form-control" id="nameInput" placeholder="Vorname Name" minlength="4" required>
+							<div class="invalid-feedback">
+								Bitte geben Sie Vorname und Name ein.
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-8 col-sm">
+							<label for="emailInput">Email Adresse</label>
+							<input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="email@example.com" required>
+							<div class="invalid-feedback">
+								Bitte geben Sie eine gültige Email Adresse an.
+							</div>
+						</div>
+					</fieldset>
+
+
+					<div class="form-group">
+						<h3 class="formtitle">Design</h3>
+						<fieldset class="rating" id="design-stars">
+							<input type="radio" id="form-design-star5" name="design-zufriedenheit" value="5" />
+								<label class="full" for="form-design-star5" title="5 stars"></label>
+							<input type="radio" id="form-design-star4" name="design-zufriedenheit" value="4" />
+								<label class="full" for="form-design-star4" title="4 stars"></label>
+							<input type="radio" id="form-design-star3" name="design-zufriedenheit" value="3" />
+								<label class="full" for="form-design-star3" title="3 stars"></label>
+							<input type="radio" id="form-design-star2" name="design-zufriedenheit" value="2" />
+								<label class="full" for="form-design-star2" title="2 stars"></label>
+							<input type="radio" id="form-design-star1" name="design-zufriedenheit" value="1" checked="checked" />
+								<label class="full" for="form-design-star1" title="1 star"></label>
+						</fieldset>
+
+						<h3 class="formtitle">Soundqualit&auml;t</h3>
+						<fieldset class="rating" id="soundquality-stars">
+							<input type="radio" id="form-soundquality-star5" name="soundquality-zufriedenheit" value="5" />
+								<label class="full" for="form-soundquality-star5" title="5 stars"></label>
+							<input type="radio" id="form-soundquality-star4" name="soundquality-zufriedenheit" value="4" />
+								<label class="full" for="form-soundquality-star4" title="4 stars"></label>
+							<input type="radio" id="form-soundquality-star3" name="soundquality-zufriedenheit" value="3" />
+								<label class="full" for="form-soundquality-star3" title="stars"></label>
+							<input type="radio" id="form-soundquality-star2" name="soundquality-zufriedenheit" value="2" />
+								<label class="full" for="form-soundquality-star2" title="2 stars"></label>
+							<input type="radio" id="form-soundquality-star1" name="soundquality-zufriedenheit" value="1" checked="checked" />
+								<label class="full" for="form-soundquality-star1" title="1 star"></label>
+						</fieldset>
+
+						<h3 class="formtitle">Preis- Leistungsverh&auml;ltnis</h3>
+						<fieldset class="rating" id="price-performance-stars">
+							<input type="radio" id="form-price-performance-star5" name="price-performance-zufriedenheit" value="5" />
+								<label class="full" for="form-price-performance-star5" title="5 stars"></label>
+							<input type="radio" id="form-price-performance-star4" name="price-performance-zufriedenheit" value="4" />
+								<label class="full" for="form-price-performance-star4" title="4 stars"></label>
+							<input type="radio" id="form-price-performance-star3" name="price-performance-zufriedenheit" value="3" />
+								<label class="full" for="form-price-performance-star3" title="3 stars"></label>
+							<input type="radio" id="form-price-performance-star2" name="price-performance-zufriedenheit" value="2" />
+								<label class="full" for="form-price-performance-star2" title="2 stars"></label>
+							<input type="radio" id="form-price-performance-star1" name="price-performance-zufriedenheit" value="1" checked="checked" />
+								<label class="full" for="form-price-performance-star1" title="1 star"></label>
+						</fieldset>
+					</div>
+
+					<br><br>
+
+					<h3 class="formtitle"></h3>
+					<fieldset>
+
+						<div class="form-group col-lg-6 col-md-8 col-sm">
+							<label for="form-textarea-feedback">Hinterlassen Sie einen Kommentar</label>
+							<textarea class="form-control" id="form-textarea-feedback" name="feedback" rows="4" minlength="5" maxlength="50" placeholder="Maximal 50 Zeichen" required></textarea>
+							<div class="invalid-feedback">
+								Bitte geben Sie einen Kommentar ein. 
+							</div>
+						</div>
+					</fieldset>
+				</form>
+				<button type="submit" class="btn btn-primary" id="submitButton" disabled onclick="sendReview()">Rezension erfassen</button>
+			</div>
+
+		</div>
+		<div class="col-sm-12 col-lg-4">
+			<div class="box">
+				<h3>Letzte Posts</h3>
+					<p><a href="index.html#box-1">Willkommen bei Beats by Brüschi!</a></p>
+					<p><a href="index.html#box-2">Empfehlungen des Teams: Kopfhörer für den Alltag</a></p>
+					<p><a href="index.html#box-3">Empfehlungen des Teams: Kopfhörer für sportliche Aktivitäten</a></p>
+					<p><a href="index.html#box-4">Empfehlungen des Teams: All in One</a></p>
+					<p><a href="index.html#box-5">Erstellung der Webseite</a></p>
+			</div>
+			<div class="box">
+				<h3>Follow Us</h3>
+				<p><img src="images/twitter.svg" alt="Twitter Logo" class="social-media"> Twitter</p>
+				<p><img src="images/instagram.svg" alt="Instagram Logo" class="social-media"> Instagram</p>
+				<p><img src="images/facebook.svg" alt="Facebook Logo" class="social-media"> Facebook</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p><small>Beats by Brüschi ©</small></p>
+		<div>
+			<small>Öffnungszeiten Kaufberatung: 
+			<p> Montag-Freitag: 08:00 - 17:00</p>
+			<p>Kontakt: matthias.brueschweiler@ntb.ch</p>
+			</small>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+	<script src="scripts/rezensionsScripts.js"></script>
+</body>
+</html>

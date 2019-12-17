@@ -1,0 +1,75 @@
+fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/* Titles */
+.formtitle {
+	clear: both;
+	line-height: normal;
+	margin: 0;
+	font-size: 1.2em;
+	padding-left: 15px;
+}
+
+/****** Style Star Rating Widget *****/
+fieldset.rating {
+	border: none;
+	float: left;
+	padding-left: 15px;
+}
+
+fieldset.rating > input {
+	display: none;
+}
+fieldset.rating > label:before {
+	margin-left: : 5px;
+	margin-right: 5px;
+	font-size: 2em;
+	display: inline-block;
+	content: "\002605";
+}
+
+fieldset.rating > label {
+	color: #ddd; 
+	float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+fieldset.rating > input:checked ~ label, /* show gold star when clicked */
+fieldset.rating:not(:checked) > label:hover, /* hover current star */
+fieldset.rating:not(:checked) > label:hover ~ label {
+	color: #FFCC00;
+} 
+
+/* hover previous stars in list */
+fieldset.rating > input:checked + label:hover,
+fieldset.rating > input:checked ~ label:hover,
+fieldset.rating > label:hover ~ input:checked ~ label, 
+fieldset.rating > input:checked ~ label:hover ~ label {
+	color: #FFED85;
+}
+
+
+#submitButton, #submitButton:hover, #submitButton:active, #submitButton:disabled #submitButton:focus {
+	background-color: #8A3232;
+	border-color: #8A3232;
+	color: white;
+}
+
+
+/* Bild */
+#produktAuswahlBild > img {
+	height: 12em;
+	padding: .2em;
+	float: right;
+}
+#produkteListe {
+	margin-top: .2em;
+	margin-bottom: .2em;
+}
+
+.clearfix {
+	overflow: auto;
+}

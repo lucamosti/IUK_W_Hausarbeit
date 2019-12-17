@@ -1,0 +1,108 @@
+/* Layout fuer Spaltenbreite */
+table {
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+
+/* erstellen der "rahmen" um die zeilen der tabelle */
+tr{
+	height: 8em;
+}
+
+/* Grey rulers between items */
+fieldset {
+	border-bottom: 1px solid gray;
+	padding-bottom: .15em;
+	margin-top: .15em;
+}
+#submitFieldset {
+	border-bottom: none;
+}
+
+
+#titleCol {
+	height: auto;
+}
+
+
+/* textausrichtung, achtung bei anpassung der anzahl spalten */
+td:nth-child(4), td:last-child, th:nth-child(4), th:last-child{
+	text-align: right;
+}
+
+/* breite der spalten */
+#picturecol{
+	width: 8em;
+}
+#titlecol{
+	width: 11%;
+}
+#pricecol{
+	width: 10%;
+}
+#amountcol{
+	width: 11%;
+}
+
+#bestellButton {
+	margin-top: 1em;
+}
+
+/* Farbe des Bestellbuttons */
+#bestellButton, #bestellButton:hover, #bestellButton:active, #bestellButton:disabled, #bestellButton:focus,
+.btn, .btn:hover, .btn:active, .btn:disabled, .btn:focus {
+	background-color: #8A3232;
+	border-color: #8A3232;
+	color: white;
+}
+
+/* Positionierung der einzelnen Felder*/
+.mengenFeld {
+	padding-left: .5em;
+	padding-right: .5em;
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 2em;
+	width: 2.5em;
+	float: right;
+}
+.anzeige {
+	padding-top: .2em;
+}
+
+/* Styling vom Popup bei value>100 */
+.popupInformation {
+	z-index: 10000;
+	width: 20em;
+	pointer-events: none;
+	padding: .2em;
+	font-family: sans-serif;
+	position: fixed; 
+	background-color: black;
+	color: white;
+	text-align: center;
+	top:50%;
+	left:50%; 
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+/* Papierkorb */
+.paperbin {
+	pointer-events: all;
+	position: absolute;
+	height: 2em;
+	width: 2em;
+	right: 0;
+	bottom: 0;
+}
+
+.containerThing {
+	position: relative;
+}
+
+.titleRow {
+	padding: 0;
+
+	font-weight: bold;
+}
